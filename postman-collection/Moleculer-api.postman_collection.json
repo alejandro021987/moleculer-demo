@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "659f35ec-67a5-4bae-a356-36a2a8be4ebe",
+		"name": "Moleculer-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/products",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/products",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Request-ID",
+									"value": "0a954979-c641-4017-92f8-53472343cec2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 16:22:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "667"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"rows\": [\n        {\n            \"_id\": \"1oGNUMszksL1OdFI\",\n            \"name\": \"Xiamoi Mi 9T\",\n            \"quantity\": 1,\n            \"price\": 299\n        },\n        {\n            \"_id\": \"4R5Ry8KdKF9P3JZE\",\n            \"name\": \"Huawei P30 Pro\",\n            \"quantity\": 15,\n            \"price\": 679\n        },\n        {\n            \"_id\": \"Gm96iFotxAC4ioVF\",\n            \"name\": \"iPhone 11 Pro\",\n            \"quantity\": 25,\n            \"price\": 999\n        },\n        {\n            \"_id\": \"Hbioir5trQMlIyBi\",\n            \"name\": \"Samsung Galaxy S10 Plus\",\n            \"quantity\": 10,\n            \"price\": 704\n        },\n        {\n            \"_id\": \"HfdPTTubJy5my3Sq\",\n            \"name\": \"Xiamoi Mi 9T\",\n            \"quantity\": 0,\n            \"price\": 299\n        },\n        {\n            \"_id\": \"jLPy02YVgj1HMfLr\",\n            \"name\": \"Xiamoi Mi 9T\",\n            \"quantity\": 0,\n            \"price\": 299\n        },\n        {\n            \"_id\": \"ks7OP14CHpsEktRC\",\n            \"name\": \"Xiamoi Mi 9T\",\n            \"quantity\": 1,\n            \"price\": 299\n        },\n        {\n            \"_id\": \"qqJk3KJjIqIdJQA3\",\n            \"name\": \"Xiamoi Mi 9T\",\n            \"quantity\": 0,\n            \"price\": 299\n        }\n    ],\n    \"total\": 8,\n    \"page\": 1,\n    \"pageSize\": 10,\n    \"totalPages\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Samsung A8\",\n  \"price\": 3000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/products",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Samsung A8\",\n  \"price\": 3000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/products",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Request-ID",
+									"value": "4b2eeb42-595c-4789-8222-07caeb864436"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 16:49:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"tRZfelLAiMHL561r\",\n    \"name\": \"Samsung A8\",\n    \"quantity\": 0,\n    \"price\": 3000\n}"
+						}
+					]
+				},
+				{
+					"name": "Product Increase quantity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"4R5Ry8KdKF9P3JZE\",\n    \"value\": 3000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/products/increaseQuantity",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"increaseQuantity"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Product Increase quantity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"4R5Ry8KdKF9P3JZE\",\n    \"value\": 3000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/products/increaseQuantity",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"increaseQuantity"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Request-ID",
+									"value": "2c1d9397-ae80-4462-81bd-3475bc59a8c9"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 19:15:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"4R5Ry8KdKF9P3JZE\",\n    \"name\": \"samsung 10\",\n    \"quantity\": 3016,\n    \"price\": 222\n}"
+						}
+					]
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"_id\": \"4R5Ry8KdKF9P3JZE\",\n  \"name\": \"samsung 10\",\n  \"price\": 20000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/products/update",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"_id\": \"4R5Ry8KdKF9P3JZE\",\n  \"name\": \"samsung 10\",\n  \"price\": 222\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/products/update",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Request-ID",
+									"value": "30719ce0-a2e1-4c40-b837-401ce89bcea8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 17:01:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"4R5Ry8KdKF9P3JZE\",\n    \"name\": \"samsung 10\",\n    \"quantity\": 15,\n    \"price\": 222\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Shipments",
+			"item": [
+				{
+					"name": "Shipments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/shipments",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"shipments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"from\": \"17 Winter PI, Boston, MA\",\n  \"to\": \"5037 Timberhill Dr, Nashville, TN\",\n  \"status\": \"initiated\",\n  \"email\": \"mcgreg112@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/shipments",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"shipments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update shipment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"6263340b72acd27a75ea1e02\",\n    \"status\": \"in transit\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/shipments/update",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"shipments",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shipment Notify customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"ZCwaajA4nTsgmlpF\",\n    \"email\": \"john112@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/shipments/notifyCustomer",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"shipments",
+								"notifyCustomer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Shipment Notify customer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"ZCwaajA4nTsgmlpF\",\n    \"email\": \"john112@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/shipments/notifyCustomer",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"shipments",
+										"notifyCustomer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Request-ID",
+									"value": "9400e26b-cb6e-4239-a3f9-45e06e4657ee"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 19:22:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": \"EMAIL SENT\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
